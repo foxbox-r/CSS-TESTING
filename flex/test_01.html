@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        .container{border:1px solid black;}
+        .block_con{display:flex;background:rgba(0,0,255,0.6);}
+        .block_con::before{content:"dispaly:flex";}
+        .inline_con{display:inline-flex;background:rgba(255,0,0,0.6);}
+        .inline_con::before{content:"dispaly:inline-flex";}
+        .item{background:orange;margin:20px;padding:20px;}
+        div{background:tomato;display:flex;margin:20px;}
+        .item-wr{background:yellowgreen;width:45%;height:150px;margin:10px;}
+        .wrap{flex-wrap:wrap;}
+        img{width:500px;height:450px;border:1px solid black;}
+
+        @keyframes justy-animation{
+            20%{
+                justify-content:flex-start;background:red;
+            }
+            40%{justify-content:flex-end;background:yellow;}
+            60%{justify-content:center;background:green;}
+            80%{justify-content:space-between;background:purple;}
+            100%{justify-content:space-around;background:blue;}
+        }
+        .justify-content{display:flex;justify-content:flex-start;animation:justy-animation 7s infinite;height:300px;}
+        .item-jsutiry{background:greenyellow;width:10%;height:70%;margin:0;border:1px solid black;}
+        @keyframse align-animation{
+            20%{align-items:flex-start;height:250px;}
+            40%{align-items:flex-end;height:250px;}
+            60%{align-items:flex-start;height:250px;}
+            80%{align-items:flex-start;height:250px;}
+            100%{align-items:flex-start;height:250px;}
+        }
+        .align-content{display:flex;flex-wrap:nowrap;animation:align-animation 7s infinite;height:300px;}
+        .align-content div{width:300px;border:3px solid black;}
+
+        .order_box{display:flex;border:3px solid black;}
+        .order_box_ordered{display:flex;border:3px solid blakc;}
+        .order_box_ordered div:nth-child(1){order:2;}
+        .order_box_ordered div:nth-child(2){order:5;}
+        .order_box_ordered div:nth-child(3){order:4;}
+        .order_box_ordered div:nth-child(4){order:-1;}
+        .order_box_ordered div:nth-child(5){order:24;}
+        .order_box_ordered div:nth-child(6){order:3;}
+        @keyframes align-content-animation{
+            0%{align-content:stretch;}
+            14%{align-content:stretch;}
+            28%{align-content:stretch;}
+            42%{align-content:stretch;}
+            58%{align-content:stretch;}
+            80%{align-content:stretch;}
+            100%{align-content:stretch;}
+        }
+        #align_content{background:greenyellow;display:flex;flex-wrap:wrap;flex-direction:row;padding:0;animation:align-content-animation 10s infinite ;height:900px;}
+        #align_content div{width:40%;height:150px;margin:0;border:1px solid black;}
+        #shrink_box{background:skyblue;display:flex;}
+        #shrink_box .item{margin:0;flex-basis:750px;border:1px solid black;}
+        #shrink_box .item:nth-child(1){flex-shrink:.5;}
+        #shrink_box .item:nth-child(2){flex-shrink:1;}
+        #center_box{display:flex;align-items:center;justify-content:center;height:300px;width:300px;}
+    </style>
+</head>
+<body>
+    <div class="container block_con">
+        <div class="item">1_item</div>
+        <div class="item">2_item</div>
+        <div class="item">3_item</div>
+    </div>
+    
+    <div class="container inline_con">
+        <div class="item">1_item</div>
+        <div class="item">2_item</div>
+        <div class="item">3_item</div>
+    </div>
+    <div class="container block_con">
+        <div class="item">1_item</div>
+        <div class="item">2_item</div>
+        <div class="item">3_item</div>
+    </div>
+    <div class="container inline_con">
+        <div class="item">1_item</div>
+        <div class="item">2_item</div>
+        <div class="item">3_item</div>
+    </div>
+    <div class="container inline_con">
+        <div class="item">1_item</div>
+        <div class="item">2_item</div>
+        <div class="item">3_item</div>
+    </div>
+    <div id="box1">
+        <div class="item">1_item</div>
+        <div class="item">2_item</div>
+        <div class="item">3_item</div>
+    </div>
+    <div class="no-wrap">
+        item-wr:width:45%;
+        <div class="item-wr">1_item_wr</div>
+        <div class="item-wr">2_item_wr</div>
+        <div class="item-wr">3_item_wr</div>
+    </div>
+    <div class="wrap">
+        item-wr:width:45%;
+        <div class="item-wr">1_item_wr</div>
+        <div class="item-wr">2_item_wr</div>
+        <div class="item-wr">3_item_wr</div>
+    </div>
+    <hr /><br />
+    justify = 주축<br />
+    align-content = 교차축(2줄 이상)<br />
+    align-items = 교차축(1줄 일때)<br />
+    <img src="../img/img2.png" alt="">
+    <img  alt="" src="../img/img3.png">
+    <img src="../img/img4.png" alt="">
+    <img src="../img/img5.png" alt="">
+    <h1 id="title">-----</h1>
+    <div class="justify-content">
+        <div class="item-jsutiry">1_item</div>
+        <div class="item-jsutiry">2_item</div>
+        <div class="item-jsutiry">3_item</div>
+        <div class="item-jsutiry">4_item</div>
+        <div class="item-jsutiry">5_item</div>
+        <div class="item-jsutiry">6_item</div>
+        <div class="item-jsutiry">7_item</div>
+    </div>
+
+    <div class="align-content">
+        <div class="item-jsutiry">1_item</div>
+        <div class="item-jsutiry">2_item</div>
+        <div class="item-jsutiry">3_item</div>
+        <div class="item-jsutiry">4_item</div>
+        <div class="item-jsutiry">5_item</div>
+        <div class="item-jsutiry">6_item</div>
+        <div class="item-jsutiry">7_item</div>
+    </div>
+    <hr />
+    <div class="order_box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <div class="order_box_ordered">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+    <div id="align_content">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <div id="shrink_box">
+        <div class="item">flex-shrink:0.5</div>
+        <div class="item">flex-shrink:1</div>
+    </div>
+    <div id="center_box">center</div>
+</body>
+</html>

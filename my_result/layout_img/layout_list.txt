@@ -1,0 +1,11 @@
+header - 맨위 fixed 로 header-nav-menu를 보여준다.
+//
+title-box - 크게 제목,가략한 내용..
+//
+content-up - 위쪽 콘텐츠 
+//
+content-middle - 중간쪽 콘텐츠
+//
+content-down - 아래쪽 콘텐츠
+//
+footer - 아래 나의 작은 설명

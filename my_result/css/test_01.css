@@ -1,0 +1,87 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+/* reset */
+
+#wrap{background:#111;}
+#header{background:#ced8e1;height:100px;}
+#title_box{background:#102b3e;height:50vh;}
+#content_up{background:#ced8e1;height:150vh;}
+#content_middle{background:#102b3e;height:50vh;}
+#content_down{background:#ced8e1;height:90vh;}
+#footer{background:#102b3e;height:23vh;}
+
+.parent_box{}
+.parent_box .content{width:80%;height:100%;margin:0 auto;background:rgba(255,255,255,0.4);}
+
+/* 남색:#102b3e
+하늘색:#ced8e1
+민트색:#1cc8a0 */
+
+/* layout */
+
+#header{}
+#header .content{display:flex;background:none;}
+#header .content .left_box{height:100%;flex-grow:1;position:relative;}
+#header .content .left_box #logo{background:#102b3e;width:30%;height:45%;border-radius:10px;position:absolute;top:50%;left:0%;transform:translate(0,-50%);}
+#header .content .right_box{height:100%;text-align:right;flex-grow:1;padding-right:20px;}
+#header .content .right_box .nav_menu{width:17%;height:15%;background:#102b3e;display:inline-block;border-radius:10px;margin-top:65px;}
+#header .content .right_box .nav_menu:nth-child(1){background:#1cc8a0;}
+/* header */
+
+#title_box{}
+#title_box .content{display:flex;flex-direction:column;justify-content:center;background:none;}
+.title_box_desc{width:30%;color:white;font-size:16px;}
+.title_box_desc h3{color:#1cc8a0;}
+.title_box_desc .title_box_button{background: #1cc8a0;border-radius:20px;height:30px;display:inline-block;margin-top:30px;width:40%;}
+
+/* title_box  */
+
+#content_up{padding-top:4%;}
+#content_up .content{background:none;}
+#content_up .content .box{width:50%;float:left;height:100%;padding-right:30px;}
+#content_up .content .left_box{}
+#content_up .content .left_box .img_list_title{margin-bottom:30px;color:#1cc8a0;font-size:1.2rem;font-weight:bold;}
+#content_up .content .left_box .img_list{height:80%;}
+#content_up .content .left_box .img_list .img_box{border-radius:20px;overflow:hidden;background:#102b3e;height:30%;margin-bottom:3.3%;display:flex;justify-content:center;align-items: center;font-size:4rem;font-weight:bold;color:#1cc8a0;}
+#content_up .content .left_box .img_slide_button{height:30px;background: #1cc8a0;border-radius: 10px;}
+#content_up .content .right_box{}
+#content_up .content .right_box .img_list_title{color:#1cc8a0;font-size:1.2rem;font-weight:bold;margin-bottom:30px;}
+#content_up .content .right_box .img_list{height:80%;}
+#content_up .content .right_box .img_list .img_contain_box{display:flex;height:20%;margin-bottom:5%;}
+#content_up .content .right_box .img_list .img_contain_box .img_box{float:left;width:35%;height:100%;background:#102b3e;border-radius:30px;}
+#content_up .content .right_box .img_list .img_contain_box .img_desc_box{float:left;width:60%;margin-left:5%;padding:20px;}
+#content_up .content .right_box .img_list .img_contain_box .img_desc_box h4{color:#1cc8a0;font-size:1.2rem;font-weight:bold;}
+#content_up .content .right_box .img_list .img_contain_box .img_desc_box .mint_box{display:inline-block;width:20px;height:20px;background:#1cc8a0;border-radius: 3px;margin-top:10px;}
+
+/* content_up */
+#content_middle{}
+#content_middle .content{}
+#content_middle .content .left_box{background:#102b3e;float:left;width:50%;height:100%;display:flex;flex-direction:column;justify-content:center;}
+#content_middle .content .left_box .title_box_desc{width:50%;}
+#content_middle .content .right_box{background:#1cc8a0;float:left;width:50%;height:100%;}
+
+/* content_middle */
+
+#content_down{}
+#content_down .content{display:flex;background:none;flex-direction:row;justify-content:center;align-items:center;}
+#content_down .content .box{background:#1cc8a0;height:60%;width:25%;border-radius:10px;}
+#content_down .content .box:nth-of-type(2){background:#102b3e;width:30%;height:80%;margin:20px;}
+
+/* content_down */
+
+#footer{}
+#footer .content{background:none;}
+#footer .content .up_box{display:flex;flex-direction:row;justify-content:center;align-items:center;height:60%;}
+#footer .content .up_box .box{width:20px;height:20px;background:#1cc8a0;margin:10px;border-radius:5px;}
+#footer .content .down_box{display:flex;flex-direction:row;justify-content:center;align-items:center;height:40%;}
+#footer .content .down_box .box{width:40px;height:3px;background:#1cc8a0;margin:10px;border-radius: 3px;}
+
+/* footer */
+
+
+@media ( max-width: 768px ){
+    #footer{background:red;}
+    .parent_box .content{width:100%;}
+    #content_up .content .box{width:100%;}
+    #content_up{height:100vh;}
+}
+
